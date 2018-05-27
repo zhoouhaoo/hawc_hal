@@ -142,7 +142,7 @@ class PSFInterpolator(object):
         densities = np.interp(angular_distances, self._interp_x, self._interp_y)
 
         # Reshape to required shape
-        point_source_img_ait = densities.reshape((self._flat_sky_p.npix_height, self._flat_sky_p.npix_width))
+        point_source_img_ait = densities.reshape((self._flat_sky_p.npix_height, self._flat_sky_p.npix_width)).T
 
         return point_source_img_ait
 
